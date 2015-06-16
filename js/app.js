@@ -12,4 +12,5 @@
 $(document).ready(function(){
     $('.task_list').addTask();
     $('.task_add_form').addClass('hidden');
+    alert('Help!');
 });
