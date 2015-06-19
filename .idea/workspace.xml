@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="851de8bc-37e4-4b0e-a9fb-05b306424f67" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/app.js" afterPath="$PROJECT_DIR$/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/index.html" afterPath="$PROJECT_DIR$/html/index.html" />
     </list>
     <ignored path="current-tasks-v1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,8 +41,8 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44257274" vertical-offset="0" max-vertical-offset="663">
-              <caret line="19" column="48" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
+            <state vertical-scroll-proportion="0.31240427" vertical-offset="0" max-vertical-offset="653">
+              <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
               <folding>
                 <element signature="e#0#42#0" expanded="false" />
               </folding>
@@ -468,12 +467,12 @@
       <workItem from="1434444782444" duration="1806000" />
       <workItem from="1434549914594" duration="2543000" />
       <workItem from="1434631665999" duration="2047000" />
-      <workItem from="1434714327491" duration="2126000" />
+      <workItem from="1434714327491" duration="2472000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20458000" />
+    <option name="totallyTimeSpent" value="20804000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1132" height="826" extended-state="0" />
@@ -725,8 +724,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44257274" vertical-offset="0" max-vertical-offset="663">
-          <caret line="19" column="48" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
+        <state vertical-scroll-proportion="0.31240427" vertical-offset="0" max-vertical-offset="653">
+          <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
           <folding>
             <element signature="e#0#42#0" expanded="false" />
           </folding>
