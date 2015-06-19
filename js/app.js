@@ -16,10 +16,12 @@ $.fn.initialize = function() {
 
 function General() {
     this.addTask =  function(event) {
+        var newTask = $(this).closest('.form-group').find('.form-control');
         event.preventDefault();
         var newLine = $('<li></li>');
-        newLine.text($(this).closest('.form-group').find('.form-control').val());
+        newLine.text(newTask.val());
         $('.must-do-tasks-list').append(newLine);
+        newTask.val("");
     };
     $('.add_task_form').on('click.add_task', '.add-task', this.addTask);
 }
