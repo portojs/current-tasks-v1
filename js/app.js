@@ -16,12 +16,15 @@ $.fn.initialize = function() {
 
 function General() {
     this.addTask =  function(event) {
-        var newTask = $(this).closest('.form-group').find('.form-control');
         event.preventDefault();
-        var newLine = $('<li></li>');
-        newLine.text(newTask.val());
-        $('.must-do-tasks-list').append(newLine);
-        newTask.val("");
+        var taskList = $('.must-do-tasks-list');
+        var addTaskField = $(this).closest('.form-group').find('.form-control');
+        var addTaskFieldValue = addTaskField.val();
+        var newLine = $('<li><button class="check_button">Check</button><button class="remove_button">Remove</button><span>' + addTaskFieldValue + '</span></li>');
+        taskList.append(newLine);
+        taskList.find('.check_button').addClass('btn btn-sm btn-info');
+        taskList.find('.remove_button').addClass('btn btn-sm btn-danger');
+        addTaskField.val("");
     };
     $('.add_task_form').on('click.add_task', '.add-task', this.addTask);
 }
