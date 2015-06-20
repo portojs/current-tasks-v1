@@ -17,9 +17,10 @@ $.fn.initialize = function() {
 function General() {
     this.addTask =  function(event) {
         event.preventDefault();
-        var taskList = $('.task-panet');
+        var taskList = $(this).closest('.task-pane').find('.task-list');
         var addTaskField = $(this).closest('.form-group').find('.form-control');
         var addTaskFieldValue = addTaskField.val();
+        alert(addTaskFieldValue);
         var newLine = $('<li><button class="check_button btn btn-sm btn-info">Check</button><button class="remove_button btn btn-sm btn-danger">Remove</button><span>' + addTaskFieldValue + '</span></li>');
         taskList.append(newLine);
         addTaskField.val("");
