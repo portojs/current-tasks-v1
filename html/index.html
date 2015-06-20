@@ -14,14 +14,35 @@
         </div>
     </div>
     <div class="container main_window">
-        <div class="container task_list">
+        <div class="container task_pane">
             <div class="row">
                 <h2>Must-do Tasks</h2>
-                <ul class="list-unstyled must-do-tasks-list">
+                <ul class="list-unstyled task-list">
                     <li>
                         <button class="btn btn-sm btn-info check_button">Check</button>
                         <button class="btn btn-sm btn-danger remove_button">Remove</button>
-                        <span>First task</span>
+                        <span>First must-do task</span>
+                    </li>
+                </ul>
+                <button type="button" class="btn btn-sm add_task_button">Add a must-do task</button>
+            </div>
+            <div class="container add_task_form">
+                <h2>Add Task Form</h2>
+                <div class="form-group">
+                    <label for="text">New Task:</label>
+                    <input type="text" class="form-control" id="text"/>
+                    <button class="btn btn-default add-task">Add</button>
+                </div>
+            </div>
+        </div>
+        <div class="container task_pane">
+            <div class="row">
+                <h2>Fun Tasks</h2>
+                <ul class="list-unstyled task-list">
+                    <li>
+                        <button class="btn btn-sm btn-info check_button">Check</button>
+                        <button class="btn btn-sm btn-danger remove_button">Remove</button>
+                        <span>First fun task</span>
                     </li>
                 </ul>
                 <button type="button" class="btn btn-sm add_task_button">Add a must-do task</button>

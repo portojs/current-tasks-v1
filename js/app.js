@@ -5,7 +5,7 @@ $.fn.openAddTaskForm = function() {
     this.each(function(){
         $(this).on('click.add_task', '.add_task_button', function(event){
             event.preventDefault();
-            $(this).closest('.task_list').find('.add_task_form').toggleClass('hidden');
+            $(this).closest('.task_pane').find('.add_task_form').toggleClass('hidden');
         });
     });
 };
@@ -17,7 +17,7 @@ $.fn.initialize = function() {
 function General() {
     this.addTask =  function(event) {
         event.preventDefault();
-        var taskList = $('.must-do-tasks-list');
+        var taskList = $('.task-panet');
         var addTaskField = $(this).closest('.form-group').find('.form-control');
         var addTaskFieldValue = addTaskField.val();
         var newLine = $('<li><button class="check_button btn btn-sm btn-info">Check</button><button class="remove_button btn btn-sm btn-danger">Remove</button><span>' + addTaskFieldValue + '</span></li>');
@@ -28,7 +28,7 @@ function General() {
 }
 
 $(document).ready(function(){
-    $('.task_list').openAddTaskForm();
+    $('.task_pane').openAddTaskForm();
     $('.main_window').initialize();
     var general = new General();
 });
