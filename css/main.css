@@ -6,7 +6,7 @@
     display: none;
 }
 
-.marked {
+.checked {
     background-color: darkgray;
     text-decoration: line-through;
 }
