@@ -20,11 +20,16 @@ function General() {
         var taskList = $(this).closest('.task_pane').find('.task_list');
         var addTaskField = $(this).closest('.form-group').find('.form-control');
         var addTaskFieldValue = addTaskField.val();
-        var newLine = $('<li><button class="check_button btn btn-sm btn-info">Check</button><button class="remove_button btn btn-sm btn-danger">Remove</button><span>' + addTaskFieldValue + '</span></li>');
+        var newLine = $('<li><button class="mark_button btn btn-sm btn-info">Mark</button><button class="remove_button btn btn-sm btn-danger">Remove</button><span>' + addTaskFieldValue + '</span></li>');
         taskList.append(newLine);
         addTaskField.val("");
     };
+    this.markTask = function(event) {
+        event.preventDefault();
+        $(this).closest('li').find('span').toggleClass('marked');
+    };
     $('.add_task_form').on('click.add_task', '.add_task', this.addTask);
+    $('.task_list').on('click.mark_task', '.mark_button', this.markTask);
 }
 
 $(document).ready(function(){

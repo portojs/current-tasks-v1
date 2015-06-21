@@ -5,3 +5,8 @@
 .hidden {
     display: none;
 }
+
+.marked {
+    background-color: darkgray;
+    text-decoration: line-through;
+}
