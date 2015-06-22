@@ -5,16 +5,13 @@ $.fn.openAddTaskForm = function() {
     this.each(function(){
         $(this).on('click.add_task', '.add_task_button', function(event){
             event.preventDefault();
-            $(this).closest('.task_pane').find('.add_task_form').toggleClass('hidden');
+            $(this).closest('.task_pane').find('.add_task_form').slideToggle();
         });
     });
 };
-$.fn.initialize = function() {
-    $('.add_task_form').addClass('hidden');
-    var mustDoTasks = [];
-};
 
 function General() {
+    var taskList = $('.task_list');
     this.addTask =  function(event) {
         event.preventDefault();
         var taskList = $(this).closest('.task_pane').find('.task_list');
@@ -35,12 +32,16 @@ function General() {
         $(this).closest('li').find('span').toggleClass('checked');
         $(this)
     };
+    this.removeTask = function(event) {
+        event.preventDefault();
+        $(this).closest('li').remove();
+    };
     $('.add_task_form').on('click.add_task', '.add_task', this.addTask);
-    $('.task_list').on('click.check_task', '.check_button', this.markTask);
+    taskList.on('click.check_task', '.check_button', this.markTask);
+    taskList.on('click.remove_task', '.remove_button', this.removeTask);
 }
 
 $(document).ready(function(){
     $('.task_pane').openAddTaskForm();
-    $('.main_window').initialize();
     var general = new General();
 });

@@ -10,3 +10,7 @@
     background-color: darkgray;
     text-decoration: line-through;
 }
+
+.add_task_form {
+    display: none;
+}
