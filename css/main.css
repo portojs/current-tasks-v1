@@ -2,15 +2,19 @@
     font-size: 32px;
 }
 
-.hidden {
-    display: none;
-}
-
 .checked {
     background-color: darkgray;
     text-decoration: line-through;
 }
 
 .add_task_form {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.old {
     display: none;
 }
