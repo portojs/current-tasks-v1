@@ -11,7 +11,7 @@ $.fn.openAddTaskForm = function() {
 };
 
 function General() {
-    var taskList = $('.task_list');
+    var list = $('.task_list');
     this.addTask =  function(event) {
         event.preventDefault();
         var taskList = $(this).closest('.task_pane').find('.task_list');
@@ -30,15 +30,15 @@ function General() {
             $(this).text('Uncheck');
         }
         $(this).closest('li').find('span').toggleClass('checked');
-        $(this)
+        $(this).closest('.main_window').find('.fun_pane').fadeToggle();
     };
     this.removeTask = function(event) {
         event.preventDefault();
         $(this).closest('li').remove();
     };
     $('.add_task_form').on('click.add_task', '.add_task', this.addTask);
-    taskList.on('click.check_task', '.check_button', this.markTask);
-    taskList.on('click.remove_task', '.remove_button', this.removeTask);
+    list.on('click.check_task', '.check_button', this.markTask);
+    list.on('click.remove_task', '.remove_button', this.removeTask);
 }
 
 $(document).ready(function(){
