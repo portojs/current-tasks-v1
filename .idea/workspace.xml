@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="851de8bc-37e4-4b0e-a9fb-05b306424f67" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/app.js" afterPath="$PROJECT_DIR$/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/index.html" afterPath="$PROJECT_DIR$/html/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="current-tasks-v1.iws" />
@@ -33,7 +32,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.8727272" vertical-offset="114" max-vertical-offset="2329">
+            <state vertical-scroll-proportion="-6.076923" vertical-offset="114" max-vertical-offset="2329">
               <caret line="16" column="39" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="39" />
               <folding />
             </state>
@@ -43,8 +42,8 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.25112107" vertical-offset="104" max-vertical-offset="867">
-              <caret line="18" column="51" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
+            <state vertical-scroll-proportion="0.27818447" vertical-offset="65" max-vertical-offset="901">
+              <caret line="17" column="80" selection-start-line="17" selection-start-column="80" selection-end-line="17" selection-end-column="80" />
               <folding>
                 <element signature="e#0#42#0" expanded="false" />
               </folding>
@@ -475,12 +474,13 @@
       <workItem from="1434892007277" duration="1838000" />
       <workItem from="1434996539969" duration="834000" />
       <workItem from="1435337290552" duration="1881000" />
-      <workItem from="1435589184907" duration="1716000" />
+      <workItem from="1435589184907" duration="1869000" />
+      <workItem from="1435762912320" duration="295000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29126000" />
+    <option name="totallyTimeSpent" value="29574000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1552" height="842" extended-state="6" />
@@ -540,6 +540,32 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/html/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="114" max-vertical-offset="2329">
+          <caret line="16" column="39" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="867">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#42#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="493">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/html/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="2329">
@@ -854,7 +880,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/html/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.8727272" vertical-offset="114" max-vertical-offset="2329">
+        <state vertical-scroll-proportion="-6.076923" vertical-offset="114" max-vertical-offset="2329">
           <caret line="16" column="39" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="39" />
           <folding />
         </state>
@@ -862,8 +888,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25112107" vertical-offset="104" max-vertical-offset="867">
-          <caret line="18" column="51" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
+        <state vertical-scroll-proportion="0.27818447" vertical-offset="65" max-vertical-offset="901">
+          <caret line="17" column="80" selection-start-line="17" selection-start-column="80" selection-end-line="17" selection-end-column="80" />
           <folding>
             <element signature="e#0#42#0" expanded="false" />
           </folding>

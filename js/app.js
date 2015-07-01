@@ -17,10 +17,12 @@ function General() {
         var taskList = $(this).closest('.task_pane').find('.task_list');
         var addTaskField = $(this).closest('.form-group').find('.form-control');
         var addTaskFieldValue = addTaskField.val();
-        var newLine = $(this).closest('.task_pane').find('li').clone();
-        newLine.find('span').html(addTaskFieldValue);
-        taskList.append(newLine);
-        addTaskField.val("");
+        if (addTaskFieldValue.length > 0) {
+            var newLine = $(this).closest('.task_pane').find('li:first-child').clone();
+            newLine.find('span').html(addTaskFieldValue);
+            taskList.append(newLine);
+            addTaskField.val("");
+        }
     };
     this.markTask = function(event) {
         event.preventDefault();
