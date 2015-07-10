@@ -26,14 +26,22 @@ function General() {
     };
     this.markTask = function(event) {
         event.preventDefault();
+        var taskList = $(this).closest('ul').find('li');
         if ($(this).closest('li').find('span').hasClass('checked')) {
             $(this).text('Check');
         }
         else {
             $(this).text('Uncheck');
         }
+        for (var i = 0, taskListLength = taskList.length; i < taskListLength; i++) {
+            if (taskList[i].find('span').hasClass('checked')) {
+                if (i == taskListLength) {
+                    $(this).closest('.main_window').find('.fun_pane').fadeToggle();
+                }
+            }
+        }
         $(this).closest('li').find('span').toggleClass('checked');
-        $(this).closest('.main_window').find('.fun_pane').fadeToggle();
+//        $(this).closest('.main_window').find('.fun_pane').fadeToggle();
     };
     this.removeTask = function(event) {
         event.preventDefault();
