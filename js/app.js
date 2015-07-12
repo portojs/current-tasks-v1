@@ -26,7 +26,8 @@ function General() {
     };
     this.markTask = function(event) {
         event.preventDefault();
-        var taskList = $(this).closest('ul').find('li');
+        var taskList = $('.must_do li');
+        console.log(taskList.eq(0).find('span').hasClass('checked'));
         if ($(this).closest('li').find('span').hasClass('checked')) {
             $(this).text('Check');
         }
@@ -34,10 +35,8 @@ function General() {
             $(this).text('Uncheck');
         }
         for (var i = 0, taskListLength = taskList.length; i < taskListLength; i++) {
-            if (taskList[i].find('span').hasClass('checked')) {
-                if (i == taskListLength) {
-                    $(this).closest('.main_window').find('.fun_pane').fadeToggle();
-                }
+            if (!taskList.eq(i).find('span').hasClass('checked')) {
+                $(this).closest('.main_window').find('.fun_pane').fadeToggle();
             }
         }
         $(this).closest('li').find('span').toggleClass('checked');
