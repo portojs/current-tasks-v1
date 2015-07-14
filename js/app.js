@@ -27,7 +27,8 @@ function General() {
     this.markTask = function(event) {
         event.preventDefault();
         var taskList = $('.must_do li');
-        console.log(taskList.eq(0).find('span').hasClass('checked'));
+        var check = 0;
+        console.log("Check: " + check);
         if ($(this).closest('li').find('span').hasClass('checked')) {
             $(this).text('Check');
         }
@@ -35,12 +36,24 @@ function General() {
             $(this).text('Uncheck');
         }
         for (var i = 0, taskListLength = taskList.length; i < taskListLength; i++) {
-            if (!taskList.eq(i).find('span').hasClass('checked')) {
-                $(this).closest('.main_window').find('.fun_pane').fadeToggle();
+            if (taskList.eq(i).find('span').hasClass('checked')) {
+                check++;
+                console.log("Is checked: " + taskList.eq(i).find('span').hasClass('checked'));
+                console.log("Check increased, now: " + check);
+            }
+            else {
+                check--;
+                console.log("Check decreased, now: " + check);
+            }
+            if (check >= taskList.length) {
+                console.log("TaskList.length: " + taskList.length + " Check value: " + check);
+                $(this).closest('.main_window').find('.fun_pane').fadeIn();
+            }
+            else {
+                $(this).closest('.main_window').find('.fun_pane').fadeOut();
             }
         }
         $(this).closest('li').find('span').toggleClass('checked');
-//        $(this).closest('.main_window').find('.fun_pane').fadeToggle();
     };
     this.removeTask = function(event) {
         event.preventDefault();
