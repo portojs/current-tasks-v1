@@ -28,32 +28,29 @@ function General() {
         event.preventDefault();
         var taskList = $('.must_do li');
         var check = 0;
-        console.log("Check: " + check);
+
         if ($(this).closest('li').find('span').hasClass('checked')) {
             $(this).text('Check');
         }
         else {
             $(this).text('Uncheck');
         }
+
+        $(this).closest('li').find('span').toggleClass('checked');
+
         for (var i = 0, taskListLength = taskList.length; i < taskListLength; i++) {
             if (taskList.eq(i).find('span').hasClass('checked')) {
                 check++;
-                console.log("Is checked: " + taskList.eq(i).find('span').hasClass('checked'));
-                console.log("Check increased, now: " + check);
-            }
-            else {
-                check--;
-                console.log("Check decreased, now: " + check);
-            }
-            if (check >= taskList.length) {
-                console.log("TaskList.length: " + taskList.length + " Check value: " + check);
-                $(this).closest('.main_window').find('.fun_pane').fadeIn();
-            }
-            else {
-                $(this).closest('.main_window').find('.fun_pane').fadeOut();
             }
         }
-        $(this).closest('li').find('span').toggleClass('checked');
+
+        if (check == taskList.length) {
+            $(this).closest('.main_window').find('.fun_pane').fadeIn();
+        }
+        else {
+            $(this).closest('.main_window').find('.fun_pane').fadeOut();
+        }
+
     };
     this.removeTask = function(event) {
         event.preventDefault();
