@@ -12,6 +12,7 @@ $.fn.openAddTaskForm = function() {
 
 function General() {
     var list = $('.task_list');
+
     this.addTask =  function(event) {
         event.preventDefault();
         var taskList = $(this).closest('.task_pane').find('.task_list');
@@ -24,26 +25,28 @@ function General() {
             addTaskField.val("");
         }
     };
-    this.markTask = function(event) {
+    
+    this.checkTask = function(event) {
+        // declare variables
         event.preventDefault();
         var taskList = $('.must_do li');
         var check = 0;
-
+        // change button text "Check" <=> "Uncheck"
         if ($(this).closest('li').find('span').hasClass('checked')) {
             $(this).text('Check');
         }
         else {
             $(this).text('Uncheck');
         }
-
+        // check or uncheck the task
         $(this).closest('li').find('span').toggleClass('checked');
-
+        // count all checked tasks
         for (var i = 0, taskListLength = taskList.length; i < taskListLength; i++) {
             if (taskList.eq(i).find('span').hasClass('checked')) {
                 check++;
             }
         }
-
+        // show Fun Tasks if all must-do tasks are completed
         if (check == taskList.length) {
             $(this).closest('.main_window').find('.fun_pane').fadeIn();
         }
@@ -52,12 +55,14 @@ function General() {
         }
 
     };
+
     this.removeTask = function(event) {
         event.preventDefault();
         $(this).closest('li').remove();
     };
+
     $('.add_task_form').on('click.add_task', '.add_task', this.addTask);
-    list.on('click.check_task', '.check_button', this.markTask);
+    list.on('click.check_task', '.check_button', this.checkTask);
     list.on('click.remove_task', '.remove_button', this.removeTask);
 }
 
