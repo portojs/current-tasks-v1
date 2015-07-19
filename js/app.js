@@ -15,20 +15,30 @@ function General() {
 
     this.addTask =  function(event) {
         event.preventDefault();
+        // declare variables
         var taskList = $(this).closest('.task_pane').find('.task_list');
         var addTaskField = $(this).closest('.form-group').find('.form-control');
         var addTaskFieldValue = addTaskField.val();
+        // append new task
         if (addTaskFieldValue.length > 0) {
+            // clone old task to set-up a new one
             var newLine = $(this).closest('.task_pane').find('li:first-child').clone();
+            // insert new task text into the cloned task
             newLine.find('span').html(addTaskFieldValue);
+            // remove from the cloned task the previous "Checked" class
+            newLine.find('span').removeClass('checked');
+            // change for the cloned task the button text to "Check"
+            newLine.find('.check_button').text('Check');
+            // add cloned task at the end of the Task List
             taskList.append(newLine);
+            // clear the Add New Task text field
             addTaskField.val("");
         }
     };
-    
+
     this.checkTask = function(event) {
-        // declare variables
         event.preventDefault();
+        // declare variables
         var taskList = $('.must_do li');
         var check = 0;
         // change button text "Check" <=> "Uncheck"
