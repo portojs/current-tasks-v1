@@ -10,6 +10,24 @@ $.fn.openAddTaskForm = function() {
     });
 };
 
+function showFunTasks(taskList, thisButton) {
+    // declare variables
+    var check = 0;
+    // count all checked tasks
+    for (var i = 0, taskListLength = taskList.length; i < taskListLength; i++) {
+        if (taskList.eq(i).find('span').hasClass('checked')) {
+            check++;
+        }
+    }
+    // show Fun Tasks if all must-do tasks are completed
+    if (check == taskList.length) {
+        thisButton.closest('.main_window').find('.fun_pane').fadeIn();
+    }
+    else {
+        thisButton.closest('.main_window').find('.fun_pane').fadeOut();
+    }
+}
+
 function General() {
     var list = $('.task_list');
 
@@ -51,7 +69,7 @@ function General() {
         // check or uncheck the task
         $(this).closest('li').find('span').toggleClass('checked');
         // show Fun Tasks depending on the completion of Must-Do Tasks
-        this.removeTask();
+        showFunTasks(taskList, $(this));
     };
 
     this.removeTask = function(event) {
