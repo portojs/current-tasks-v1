@@ -44,8 +44,8 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3240469" vertical-offset="765" max-vertical-offset="1853">
-              <caret line="60" column="22" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.5727412" vertical-offset="663" max-vertical-offset="1632">
+              <caret line="63" column="47" selection-start-line="63" selection-start-column="47" selection-end-line="63" selection-end-column="47" />
               <folding>
                 <element signature="e#0#42#0" expanded="false" />
               </folding>
@@ -482,12 +482,12 @@
       <workItem from="1436723861513" duration="2210000" />
       <workItem from="1436872414383" duration="1900000" />
       <workItem from="1437295118754" duration="5066000" />
-      <workItem from="1437380145640" duration="1519000" />
+      <workItem from="1437380145640" duration="3921000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42351000" />
+    <option name="totallyTimeSpent" value="44753000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1552" height="842" extended-state="6" />
@@ -1009,8 +1009,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3240469" vertical-offset="765" max-vertical-offset="1853">
-          <caret line="60" column="22" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.5727412" vertical-offset="663" max-vertical-offset="1632">
+          <caret line="63" column="47" selection-start-line="63" selection-start-column="47" selection-end-line="63" selection-end-column="47" />
           <folding>
             <element signature="e#0#42#0" expanded="false" />
           </folding>

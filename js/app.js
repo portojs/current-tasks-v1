@@ -10,28 +10,13 @@ $.fn.openAddTaskForm = function() {
     });
 };
 
-function showFunTasks(taskList, thisButton) {
-    // declare variables
-    var check = 0;
-    // count all checked tasks
-    for (var i = 0, taskListLength = taskList.length; i < taskListLength; i++) {
-        if (taskList.eq(i).find('span').hasClass('checked')) {
-            check++;
-        }
-    }
-    // show Fun Tasks if all must-do tasks are completed
-    if (check == taskList.length) {
-        thisButton.closest('.main_window').find('.fun_pane').fadeIn();
-    }
-    else {
-        thisButton.closest('.main_window').find('.fun_pane').fadeOut();
-    }
-}
-
-function General() {
+function General(el) {
+    //declare variables
     var list = $('.task_list');
+    var tasks = $('.must_do li');
+    el.this = el;
 
-    this.addTask =  function(event) {
+    el.this.addTask =  function(event) {
         event.preventDefault();
         // declare variables
         var taskList = $(this).closest('.task_pane').find('.task_list');
@@ -52,13 +37,13 @@ function General() {
             // clear the Add New Task text field
             addTaskField.val("");
         }
+        tasks = $('.must_do li');
+        el.this.showFunTasks(tasks, $(this));
     };
 
-    this.checkTask = function(event) {
+    el.this.checkTask = function(event) {
         event.preventDefault();
-        // declare variables
-        var taskList = $('.must_do li');
-        var check = 0;
+        tasks = $('.must_do li');
         // change button text "Check" <=> "Uncheck"
         if ($(this).closest('li').find('span').hasClass('checked')) {
             $(this).text('Check');
@@ -69,25 +54,27 @@ function General() {
         // check or uncheck the task
         $(this).closest('li').find('span').toggleClass('checked');
         // show Fun Tasks depending on the completion of Must-Do Tasks
-        showFunTasks(taskList, $(this));
+        el.this.showFunTasks(tasks, $(this));
     };
 
-    this.removeTask = function(event) {
+    el.this.removeTask = function(event) {
         event.preventDefault();
         $(this).closest('li').remove();
+        tasks = $('.must_do li');
+        el.this.showFunTasks(tasks, $('.must_do'));
     };
 
-    this.showFunTasks = function(taskList, thisButton) {
+    el.this.showFunTasks = function(tasks, thisButton) {
         // declare variables
         var check = 0;
         // count all checked tasks
-        for (var i = 0, taskListLength = taskList.length; i < taskListLength; i++) {
-            if (taskList.eq(i).find('span').hasClass('checked')) {
+        for (var i = 0, taskListLength = tasks.length; i < taskListLength; i++) {
+            if (tasks.eq(i).find('span').hasClass('checked')) {
                 check++;
             }
         }
         // show Fun Tasks if all must-do tasks are completed
-        if (check == taskList.length) {
+        if (check == tasks.length && check > 0) {
             thisButton.closest('.main_window').find('.fun_pane').fadeIn();
         }
         else {
@@ -95,12 +82,12 @@ function General() {
         }
     };
 
-    $('.add_task_form').on('click.add_task', '.add_task', this.addTask);
-    list.on('click.check_task', '.check_button', this.checkTask);
-    list.on('click.remove_task', '.remove_button', this.removeTask);
+    $('.add_task_form').on('click.add_task', '.add_task', el.this.addTask);
+    list.on('click.check_task', '.check_button', el.this.checkTask);
+    list.on('click.remove_task', '.remove_button', el.this.removeTask);
 }
 
 $(document).ready(function(){
     $('.task_pane').openAddTaskForm();
-    var general = new General();
+    var general = new General($(document));
 });
